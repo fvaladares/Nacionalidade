@@ -1,6 +1,6 @@
 /*
- * Created/Adapted by fabricio on 07/08/2022 21:02
- * Last modified 07/08/2022 21:02
+ * Created/Adapted by fabricio on 10/08/2022 05:51
+ * Last modified 10/08/2022 05:49
  *
  * Copyright (C) 2022 Professor fabricio -- PUC Minas Virtual
  *
@@ -21,14 +21,8 @@
  *
  */
 
-package br.pucminas.meunome
+package br.pucminas.meunome.ui.iniciofragment
 
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }
-}
+class InicioFragment : Fragment()
