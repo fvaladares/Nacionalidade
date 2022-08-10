@@ -1,6 +1,6 @@
 <!--
-  ~ Created/Adapted by fabricio on 10/08/2022 05:07
-  ~ Last modified 10/08/2022 05:07
+  ~ Created/Adapted by fabricio on 10/08/2022 05:30
+  ~ Last modified 10/08/2022 05:11
   ~
   ~ Copyright (C) 2022 Professor fabricio - PUC Minas Virtual
   ~
@@ -22,7 +22,7 @@
   -->
 
 <resources>
-    <string name="app_name">Meu Nome</string>
+    <string name="app_name">Nacionalidade</string>
     <string name="lbl_informacoes">Informações</string>
     <string name="lbl_pesquisar">Pesquisar</string>
     <string name="nome_lbl">Nome</string>
