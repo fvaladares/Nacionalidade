@@ -1,8 +1,8 @@
 /*
- * Created/Adapted by fabricio on 07/08/2022 21:02
- * Last modified 07/08/2022 21:02
+ * Created/Adapted by fabricio on 10/08/2022 05:07
+ * Last modified 08/08/2022 18:34
  *
- * Copyright (C) 2022 Professor fabricio -- PUC Minas Virtual
+ * Copyright (C) 2022 Professor fabricio - PUC Minas Virtual
  *
  * Code based on a example created by Google Developer Training
  *
@@ -21,14 +21,11 @@
  *
  */
 
-package br.pucminas.meunome
+package br.pucminas.meunome.domain.entidade
 
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import com.squareup.moshi.Json
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }
-}
+data class RetornoApi(
+    val name: String,
+    @Json(name = "country") val country: List<Pais>,
+)

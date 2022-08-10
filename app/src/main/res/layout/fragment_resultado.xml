@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?><!--
   ~ Created/Adapted by fabricio on 10/08/2022 05:07
-  ~ Last modified 10/08/2022 05:06
+  ~ Last modified 08/08/2022 07:46
   ~
   ~ Copyright (C) 2022 Professor fabricio - PUC Minas Virtual
   ~
@@ -21,18 +21,19 @@
   ~
   -->
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.MainActivity">
+    tools:context=".ui.resultadofragment.ResultadoFragment">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/nav_host_fragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNomes"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/nav_graph" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:clipToPadding="false"
+        android:padding="16dp"
+        tools:itemCount="4"
+        tools:listitem="@layout/item_view_origin" />
+
+</FrameLayout>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?><!--
   ~ Created/Adapted by fabricio on 10/08/2022 05:07
-  ~ Last modified 10/08/2022 05:06
+  ~ Last modified 08/08/2022 19:14
   ~
   ~ Copyright (C) 2022 Professor fabricio - PUC Minas Virtual
   ~
@@ -21,18 +21,28 @@
   ~
   -->
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.main.MainActivity">
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicioFragment">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/nav_host_fragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/nav_graph" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="br.pucminas.meunome.ui.iniciofragment.InicioFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_inicio">
+        <action
+            android:id="@+id/action_inicioFragment_to_resultadoFragment"
+            app:destination="@id/resultadoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultadoFragment"
+        android:name="br.pucminas.meunome.ui.resultadofragment.ResultadoFragment"
+        android:label="@string/nome_pesquisado"
+        tools:layout="@layout/fragment_resultado">
+        <argument
+            android:name="nome"
+            app:argType="string" />
+    </fragment>
+</navigation>
